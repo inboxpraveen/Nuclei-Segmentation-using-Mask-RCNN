@@ -16,11 +16,11 @@ We are given [Nuclei Segmentation dataset](https://drive.google.com/open?id=1BdI
 
 Sample training images:
 
-<img src="images/train_images_samples.jpg">
+<img src="Images/train_images_samples.jpg">
 
 Sample training images:
 
-<img src="images/test_images_samples.jpg">
+<img src="Images/test_images_samples.jpg">
 
 
 
@@ -32,7 +32,7 @@ Such biomedical images require very precise training since nuclei size in an ima
 
 The architecture looks something like this
 
-<img src="images/unet.png">
+<img src="Images/unet.png">
 
 
 
@@ -46,7 +46,7 @@ The initial approach was made using the default architecture, which had 31,032,8
 
 When trained for 15 epochs, the network resulted in constant IOU. Hence, we were not able to apply the UNet default architecture directly for our problem statement. During prediction, we keep a threshold value of prediction, over which all the images are segmented based on their mean IOU. The threshold value is 0.5. When predictions were made from the default architecture, it resulted in a dark image without any segmentation since mean IOU was not greater than 0.5, can also seen in the following prediction image.
 
-<img src="images/prediction_mapping_model1.jpg"> 
+<img src="Images/prediction_mapping_model1.jpg"> 
 
 #### Inferences made from default U-Net and definition of updated architecture
 
@@ -71,7 +71,7 @@ Using the above architecture, we obtained Mean_IOU score of 86%, which is double
 
 This network did fantastic job during predictions, which can also be concluded by the following image.
 
-<img src="images/prediction_mapping_model2.jpg">
+<img src="Images/prediction_mapping_model2.jpg">
 
 #### Image Augmentation (Worth a try)
 
@@ -81,13 +81,13 @@ We also tried to Image augmentations strategies mentioned in the [U-Net Paper](h
 
 # Final Predictions on Validation set
 
-<img src="images/predictions_on_validation_set.png">
+<img src="Images/predictions_on_validation_set.png">
 
 # Prediction on Test Images and & sample prediction output
 
-<img src="images/Predicting_on_random_Test_image.jpg">
+<img src="Images/Predicting_on_random_Test_image.jpg">
 
-<img src="images/Prediction_result_on_random_Test_image.jpg">
+<img src="Images/Prediction_result_on_random_Test_image.jpg">
 
 # Thank you!
 
